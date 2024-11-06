@@ -1,1 +1,25 @@
+.red-box {
+    background-color: #e4002b;;
+    color: white;
+    font-weight: 500;
+    font-family: sans-serif;
+}
 
+.headline {
+    color: black;
+    font-family: sans-serif;
+}
+
+h1 {
+    padding: 1em;
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+}
+
+h6 {
+    color: gray;
+    text-align: center;
+}
