@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://unpkg.com/tabulator-tables/dist/tabulator.min.js"></script>
+  <link href="https://unpkg.com/tabulator-tables@6.3.0/dist/css/tabulator.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@6.3.0/dist/js/tabulator.min.js"></script>
+</head>
+<body>
+  <div id="example-table"></div>
+  <script>
+    const tableData = [
+      {id:1, name:"Oli Bob", age:33, profession:"Web Developer"}
+    ];
+
+    new Tabulator("#example-table", {
+      data: tableData,
+      columns: [
+        {title: "Name", field: "name"},
+        {title: "Age", field: "age"},
+        {title: "Profession", field: "profession"}
+      ]
+    });
+  </script>
+  <script src="./js/metObjects.js"></script>
+  <script src="./js/tabulator.js"></script>
+</body>
+</html>
