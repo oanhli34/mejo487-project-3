@@ -7,7 +7,9 @@
     <link href="./css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.23.5/dist/bootstrap-table.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
+    <body>
 
     <!--first nav bar-->
     <nav class="navbar sticky-top py-2 border-bottom red-box">
@@ -73,12 +75,33 @@
                 from the comfort of your own home using the data dashboards below.
             </p>
     </div>
+    <table id="myTable" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Object Number</th>
+                <th>Object ID</th>
+                <th>Department</th>
+                <th>Accession Year</th>
+                <th>Object Name</th>
+                <th>Title</th>
+                <th>Culture</th>
+                <th>Period</th>
+                <th>Artist Display Name</th>
+                <th>Artist Nationality</th>
+                <th>Object Date</th>
+                <th>Object Begin Date</th>
+                <th>Object End Date</th>
+                <th>Medium</th>
+                <th>Country</th>
+                <th>Region</th>
+            </tr>
+        </thead>
+    </table>
 
-    <table id="tableBody"></table>
-</table>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.23.5/dist/bootstrap-table.min.js"></script>
     <script src="https://kit.fontawesome.com/af41274073.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
-    <script src="./js/metObjects.js"></script>
+    <script src="./js/test.js"></script>
 </body>
 </html>

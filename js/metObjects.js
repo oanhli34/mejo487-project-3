@@ -1,25 +1,30 @@
-fetch('MetObjects_clean.json')
-.then(response => response.json())
-.then(data => {
-    const tableBody = document.getElementById('tableBody');
-
-    data.forEach(item => {
-        const row = document.createElement('tr');
-        const objectNumberCell = document.createElement('td');
-        const objectIdCell = document.createElement('td');
-        // ... add more cells as needed
-
-        objectNumberCell.textContent = item['Object Number'];
-        objectIdCell.textContent = item['Object ID'];
-        // ... set text content for other cells
-
-        row.appendChild(objectNumberCell);
-        row.appendChild(objectIdCell);
-        // ... append other cells to the row
-
-        tableBody.appendChild(row);
-    });
-})
-.catch(error => {
-    console.error('Error fetching or parsing JSON:', error);
+$('#myTable').DataTable({
+    ajax: {
+        url: '../MetObjects_clean.json',
+        dataSrc: 'results'
+    },
+    columns: [
+        { data: 'Object Number' },
+        { data: 'Object ID' },
+        { data: 'Department' },
+        { data: 'AccessionYear' },
+        { data: 'Object Name' },
+        { data: 'Title' },
+        { data: 'Culture' },
+        { data: 'Period' },
+        { 
+            data: 'Artist Display Name', 
+            render: function(data, type, row, meta) {
+                console.log('Row:', meta.row, 'Artist Display Name:', data);  // Log each row’s data
+                return data || '';  // Return data or an empty string if undefined
+            }
+        },
+        { data: 'Artist Nationality', defaultContent: '' },
+        { data: 'Object Date' },
+        { data: 'Object Begin Date' },
+        { data: 'Object End Date' },
+        { data: 'Medium' },
+        { data: 'Country', defaultContent: '' },
+        { data: 'Region', defaultContent: '' }
+    ]
 });
