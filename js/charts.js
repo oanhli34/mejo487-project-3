@@ -2,7 +2,7 @@
 // Function to fetch and parse the JSON file
     async function loadJSON() {
         try {
-          const response = await fetch('../metobjects_2.json');
+          const response = await fetch('https://opal.ils.unc.edu/~jphung/mejo487-project-3/metobjects_2.json');
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
