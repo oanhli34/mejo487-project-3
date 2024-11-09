@@ -1,8 +1,10 @@
 $('#myTable').DataTable({
     ajax: {
-        url: '../MetObjects_clean.json',
-        dataSrc: 'results'
+        url: '../metobjects_2.json',
+        dataSrc: ''
     },
+    pageLength: 10,
+    scrollX: true,
     columns: [
         { data: 'Object Number' },
         { data: 'Object ID' },
@@ -12,13 +14,7 @@ $('#myTable').DataTable({
         { data: 'Title' },
         { data: 'Culture' },
         { data: 'Period' },
-        { 
-            data: 'Artist Display Name', 
-            render: function(data, type, row, meta) {
-                console.log('Row:', meta.row, 'Artist Display Name:', data);  // Log each row’s data
-                return data || '';  // Return data or an empty string if undefined
-            }
-        },
+        { data: 'Artist Display Name', },
         { data: 'Artist Nationality', defaultContent: '' },
         { data: 'Object Date' },
         { data: 'Object Begin Date' },
