@@ -1,7 +1,7 @@
 $('#myTable').DataTable({
     ajax: {
         url: 'https://opal.ils.unc.edu/~jphung/mejo487-project-3/metobjects_2.json',
-        dataSrc: ''
+        dataSrc: '',
         error: function (jqXHR, textStatus, errorThrown) {
             console.error('AJAX Error:', textStatus, errorThrown);
             console.error('Response Text:', jqXHR.responseText);
